@@ -1,6 +1,6 @@
 # Answers to theory questions and problem results
 
-## 1. What is the curse of dimensionality? [10 points]
+## 1. What is the curse of dimensionality? 
 
 Computation: Clustering algorithms applied to high-dimensional word embeddings may experience increased computational complexity. Many clustering algorithms involve distance computations between data points, which become computationally expensive in high-dimensional spaces. As the dimensionality of the word embeddings increases, the computational requirements for clustering also increase, leading to longer processing times and higher resource usage.
 
@@ -10,7 +10,7 @@ Overfitting: High-dimensional word embeddings pose a risk of overfitting when us
 
 Noise: High-dimensional embeddings are more susceptible to noise and outliers, which can distort clustering results and affect cluster quality.
 
-## 2. Explain in brief the embedding techniques you have used. [10 points]
+## 2. Explain in brief the embedding techniques you have used. 
 
 Word2Vec: Word2Vec generates dense vector representations of words in a high-dimensional space. The word2vec() function tokenizes text into words, converts them to lowercase, and trains a Word2Vec model. Document embedding is computed by averaging word embeddings for words present in the model vocabulary.
 
@@ -38,7 +38,7 @@ X-RAY EMISSION LASER BEAMS FROM SOLID-STATE CATHODE MEDIUM OF HIGH-CURRENT GLOW 
 Document 3 and Document 25: Max Similarity Score: 0.9862829446792603
 Document 25 talks about EXCESS HEAT PRODUCTION IN Pd/D and palladium–deuteride and document 3 talks about Extensive evidence exists for cold fusion to produce transmutation products as well as excess heat and palladium–deuteride. Both similar.
 
-## 3. From the two embedding models used, which model performs better? Why do you think so? [10 points]
+## 3. From the two embedding models used, which model performs better? Why do you think so?
 
 BERT:
 Document pairs such as Document 9 and Document 11, Document 2 and Document 12, and Document 8 and Document 9 have high cosine similarity scores, indicating strong semantic similarity between the documents.
@@ -52,8 +52,6 @@ Document 20 and Document 25 appear to be less relevant as they discuss different
 Overall, BERT appears to perform better than Word2Vec. BERT embeddings provide more context-aware representations of text, allowing for a better understanding of semantic similarity between documents.BERT captures the nuances of language and can identify similarities in meaning even if the wording is slightly different, leading to more accurate similarity scores. Word2Vec, while effective in some cases, may struggle to capture the full semantic context of documents, leading to varying levels of relevance in the identified similar document pairs.
 
 ## 4. If you are using algorithms like KMeans, justify the choice of the number of clusters (hyperparameter) using the Elbow method or Silhouette Score.
-
-![alt text](image.png)
 
 We implemnted both the elbow and silhouette score. In the elbow method as the number of clusters increases, the inertia typically decreases. However, beyond a certain point, the rate of decrease slows down: The "elbow point" on the plot represents the optimal value of k. In the silhouette method the value of k that maximizes the average Silhouette Score is considered the optimal number of clusters. When both the Elbow method and Silhouette Score suggest the same optimal value of k (such as k=2 in our case), it provides stronger justification for the choice of the number of clusters as 2.
 
